@@ -4,6 +4,12 @@
 def key_for_min_value(name_hash)
   r_key = ''
   r_val = 100000
-  name_hash.each do | key, value
+  name_hash.each do | key, value |
+    if value < r_val
+      r_val = value
+      r_key = key
+    end
+  end
+  r_key
 
 end
